@@ -60,4 +60,4 @@ while True:
         account.logout(name_to_validate)
         quit()
     else:
-        print('Invalid option!')
+        print('Invalid option')
