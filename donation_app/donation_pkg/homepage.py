@@ -20,7 +20,7 @@ def donate(username):
 def show_donations(donations):
     print("\n--------- All Donations ---------")
     if len(donations) == 0:
-        print("Currently, there are no donations.\n")
+        print("\nCurrently, there are no donations.\n")
     else:
         for donor in donations:
             print(donor)
