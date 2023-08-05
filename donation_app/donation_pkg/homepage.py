@@ -12,10 +12,9 @@ def show_homepage():
 
 
 def donate(username):
-    donate_amt = float(input('Enter amount to donate: '))
-    donation_string = username.capitalize() + ' donated $' + str(donate_amt)
+    donation_amt = float(input('Enter amount to donate: '))
     print('Thank you for your donation!')
-    return donation_string
+    return donation_amt
 
 
 def show_donations(donations):

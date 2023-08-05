@@ -4,6 +4,8 @@ database = {"admin": "password"}
 
 donations = []
 
+donation_amt = 0
+
 authorized_user = ""
 
 
@@ -35,10 +37,15 @@ while True:
         if authorized_user == "":
             print('You are not logged in!')
         elif authorized_user != "":
-            donation_string = homepage.donate(authorized_user)
+            user_donation = homepage.donate(authorized_user)
+            donation_amt += user_donation
+            donation_string = authorized_user.capitalize() + ' donated $' + \
+                str(user_donation)
+
             donations.append(donation_string)
     elif user_input == "4":
         homepage.show_donations(donations)
+        print('Total: $' + str(donation_amt))
     elif user_input == "5":
         print("Goodbye", authorized_user)
         quit()
