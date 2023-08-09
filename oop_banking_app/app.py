@@ -34,14 +34,12 @@ class BankUser(User):
         print('You withdrawed $' + str(withdraw_amount))
         print('Your current balance is: $' + str(self.balance))
 
+    def transfer_money(self):
+        user_pin = input("Enter the reciepiant's PIN number? ")
+        transfer_amt = input('How much would you like to transfer? ')
 
-'''
-    def transfer_money():
-
-    def request_money(): '''
+    def request_money(self):
+        request_amt = input('How much would you like to request? ')
 
 
 peter = BankUser('Peter', '1234', 'pass123')
-peter.show_balance()
-peter.deposit()
-peter.withdraw()
