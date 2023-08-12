@@ -2,6 +2,8 @@ import random
 
 tries = 5
 
+answer = random.randint(0, 100)
+
 
 def guess_random_num_binary(tries, start, stop):
     answer = random.randint(start, stop)
