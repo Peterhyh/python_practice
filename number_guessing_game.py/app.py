@@ -1,6 +1,6 @@
 import random
 
-tries = 5
+tries = 7
 
 answer = random.randint(0, 100)
 
