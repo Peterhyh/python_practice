@@ -1,4 +1,4 @@
-import os
+from replit import clear
 
 print('Welcome to the secret auction program.')
 
@@ -12,11 +12,11 @@ while True:
     other_bidder = input(
         "Are there other bidders? Type 'yes' or 'no'.\n").lower()
     if other_bidder == 'yes':
-        os.system('clear')
+        clear()
     elif other_bidder == 'no':
         highest_bidder = max(bidders, key=bidders.get)
         print(
-            f'The winner is {highest_bidder} with a bid of ${bidders[highest_bidder]}')
+            f'The winner is {highest_bidder.capitalize()} with a bid of ${bidders[highest_bidder]}')
         break
     else:
         print('Invalid selection\n')
