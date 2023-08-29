@@ -14,7 +14,9 @@ while True:
     if other_bidder == 'yes':
         os.system('clear')
     elif other_bidder == 'no':
+        highest_bidder = max(bidders, key=bidders.get)
+        print(
+            f'The winner is {highest_bidder} with a bid of ${bidders[highest_bidder]}')
         break
     else:
         print('Invalid selection\n')
-print(bidders)
