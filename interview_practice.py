@@ -2,28 +2,37 @@ input_string = "5.0,100,5.5,101,6.0,102:L10;5.0,99,5.5,100,6.0,101:L20;"
 
 first_array = input_string.split(";")
 
-# ['5.0,100,5.5,101,6.0,102:L10', '5.0,99,5.5,100,6.0,101:L20', '']
+# first_array = ['5.0,100,5.5,101,6.0,102:L10', '5.0,99,5.5,100,6.0,101:L20', '']
 first_array.pop()
-# ['5.0,100,5.5,101,6.0,102:L10', '5.0,99,5.5,100,6.0,101:L20']
+# first_array = ['5.0,100,5.5,101,6.0,102:L10', '5.0,99,5.5,100,6.0,101:L20']
 
 output_lines = []
 
 second_array = first_array[0].split(":")
-# ['5.0,100,5.5,101,6.0,102', 'L10']
+# second_array = ['5.0,100,5.5,101,6.0,102', 'L10']
 third_array = second_array[0].split(",")
-print(third_array)
-# ['5.0', '100', '5.5', '101', '6.0', '102']
+# third_array = ['5.0', '100', '5.5', '101', '6.0', '102']
 
-# for j in range(0, int(len(third_array)/2)+1):
-#     output_lines.append("")
+for j in range(0, int(len(third_array)/2)+1):
+    output_lines.append("")
+# output_lines = ['']
+# output_lines = ['', '']
+# output_lines = ['', '', '']
+# output_lines = ['', '', '', '']
+# why divid by 2 and then add 1?
+print(output_lines)
+for i in range(0, len(first_array)):
+    line = first_array[i].split(":")
+    # ['5.0,100,5.5,101,6.0,102', 'L10']
+    # ['5.0,99,5.5,100,6.0,101', 'L20']
+    output_lines[0] += "," + line[1]
+    # output_lines = [',L10,L20', '', '', '']
 
-
-# for i in range(0, len(first_array)):
-#     line = first_array[i].split(":")
-#     output_lines[0] += "," + line[1]
-
-#     part_1 = line[0].split(",")
-#     cont = 0
+    part_1 = line[0].split(",")
+    # part_1 =
+    # ['5.0', '100', '5.5', '101', '6.0', '102']
+    # ['5.0', '99', '5.5', '100', '6.0', '101']
+    cont = 0
 
 #     for j in range(0, len(part_1)):
 #         if not j % 2 and not i % 2:
