@@ -20,7 +20,7 @@ for j in range(0, int(len(third_array)/2)+1):
 # output_lines = ['', '', '']
 # output_lines = ['', '', '', '']
 # why divid by 2 and then add 1?
-print(output_lines)
+
 for i in range(0, len(first_array)):
     line = first_array[i].split(":")
     # ['5.0,100,5.5,101,6.0,102', 'L10']
@@ -34,10 +34,12 @@ for i in range(0, len(first_array)):
     # ['5.0', '99', '5.5', '100', '6.0', '101']
     cont = 0
 
-#     for j in range(0, len(part_1)):
-#         if not j % 2 and not i % 2:
-#             output_lines[cont+1] += "," + part_1[j]
-#             cont += 1
+    for j in range(0, len(part_1)):
+        if not j % 2 and not i % 2:
+            output_lines[cont+1] += "," + part_1[j]
+            cont += 1
+            print(output_lines)
+            # output_lines = [',5.0']
 
 #         if j % 2 and not i % 2:
 #             output_lines[cont] += "," + part_1[j]
