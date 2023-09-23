@@ -23,6 +23,7 @@ for j in range(0, int(len(third_array)/2)+1):
 
 for i in range(0, len(first_array)):
     line = first_array[i].split(":")
+    # line =
     # ['5.0,100,5.5,101,6.0,102', 'L10']
     # ['5.0,99,5.5,100,6.0,101', 'L20']
     output_lines[0] += "," + line[1]
@@ -49,4 +50,4 @@ for i in range(0, len(first_array)):
 #             output_lines[cont] += "," + part_1[j]
 
 # for i in output_lines:
-#     print(i.replace(",", "   "))
+#     print(i.replace(",", "    "))
