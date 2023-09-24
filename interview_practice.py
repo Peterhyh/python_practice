@@ -50,4 +50,4 @@ for i in range(0, len(first_array)):
 #             output_lines[cont] += "," + part_1[j]
 
 # for i in output_lines:
-#     print(i.replace(",", "    "))
+#     print(i.replace(",", "   "))
