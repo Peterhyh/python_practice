@@ -22,7 +22,6 @@ third_row = filtered_row[1].split(',')
 
 
 print(third_row)
-# print(string.rjust(15))
 
 
 # first_array = input_string.split(";")
