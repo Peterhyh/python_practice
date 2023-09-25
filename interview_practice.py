@@ -6,17 +6,23 @@ split_string.pop()
 first_row = []
 
 
-def sort_index(index):
-    print(index)
-
+filtered_row = []
 
 for i in range(0, len(split_string)):
     split_index = split_string[i].split(':')
     first_row.append(split_index[1])
-    sort_index(split_index[0])
+    filtered_row.append(split_index[0])
+
+string = ''
+for j in first_row:
+    string += j + ' '
+
+second_row = filtered_row[0].split(',')
+third_row = filtered_row[1].split(',')
 
 
-print(first_row)
+print(third_row)
+# print(string.rjust(15))
 
 
 # first_array = input_string.split(";")
