@@ -1,3 +1,4 @@
+
 string = "5.0,100,5.5,101,6.0,102:L10;5.0,99,5.5,100,6.0,101:L20;"
 
 split_string = string.split(';')
@@ -20,8 +21,18 @@ for j in first_row:
 second_row = filtered_row[0].split(',')
 third_row = filtered_row[1].split(',')
 
+new_array = [int(x) if x.isdigit() else float(x)
+             for x in second_row]
 
-print(third_row)
+new_array += [int(x) if x.isdigit() else float(x) for x in third_row]
+
+filtered_array = []
+
+for x in new_array:
+    if not x in filtered_array:
+        filtered_array.append(x)
+
+print(sorted(filtered_array))
 
 
 # first_array = input_string.split(";")
